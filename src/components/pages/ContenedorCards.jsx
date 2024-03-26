@@ -1,7 +1,7 @@
 import React from "react";
 import CardReceta from "./receta/CardReceta";
 import { Link } from "react-router-dom";
-import imgSinProductos from "../../assets/src/assets/sinProductos.png";
+import imgSinProductos from "../../assets/sinProductos.png";
 
 const ContenedorCards = ({ recetas }) => {
   return (
