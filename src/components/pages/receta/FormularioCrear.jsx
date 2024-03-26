@@ -29,7 +29,7 @@
         if (respuesta.status === 200) {
           Swal.fire({
             title: `Buen trabajo!`,
-            text: `Su receta: ${receta.nombreReceta} ha sido editada correctamente`,
+            html: `Su receta: <span class="text-warning">${receta.nombreReceta}</span> ha sido editada correctamente`,
             icon: "success",
           });
           redireccionar("/administrar");
@@ -46,7 +46,7 @@
         if (crearReceta.status === 201) {
           Swal.fire({
             title: "Buen trabajo!",
-            text: `Su receta: ${receta.nombreReceta} ha sido añadida al inicio`,
+            html: `Su receta: <span class="text-success">${receta.nombreReceta}</span> ha sido añadida al inicio`,
             icon: "success",
           });
         } else {

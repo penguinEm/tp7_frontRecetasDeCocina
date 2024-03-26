@@ -10,8 +10,7 @@ const ItemTablaReceta = ({ receta, setRecetas }) => {
 
   const borrarReceta = () => {
     Swal.fire({
-      title: `¿Estas seguro que deseas borrar la receta ${receta.nombreReceta} ?`,
-      text: "Este paso es irreversible!",
+      html: `¿Estas seguro que deseas borrar la receta <span class="text-danger">${receta.nombreReceta}</span> ?`,
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -22,11 +21,12 @@ const ItemTablaReceta = ({ receta, setRecetas }) => {
       if (result.isConfirmed) {
         const respuesta = await borrarRecetaApi(receta._id);
         if (respuesta.status === 200) {
-          const recetasActualizadas = await obtenerRecetas();
+          const respuesta = await obtenerRecetas();
+          const recetasActualizadas = await respuesta.json();
           setRecetas(recetasActualizadas);
           Swal.fire({
             title: "Borrado!",
-            text: `Su receta: ${receta.nombreReceta} ha sido borrada!`,
+            html: `Su receta: <span class="text-danger">${receta.nombreReceta}</span> ha sido borrada!`,
             icon: "success",
           });
         } else {

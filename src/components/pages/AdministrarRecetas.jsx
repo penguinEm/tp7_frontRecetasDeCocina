@@ -15,9 +15,19 @@ const AdministrarRecetas = () => {
   }, []);
 
   const cargarRecetasEnAdmin = async () => {
-    const respuesta = await obtenerRecetas();
-    setRecetas(respuesta);
+    try {
+      const respuesta = await obtenerRecetas();
+      if (respuesta.status === 200) {
+        const recetas = await respuesta.json();
+        setRecetas(recetas);
+      } else {
+        console.error("Error al obtener las recetas:");
+      }
+    } catch (error) {
+      console.error("Error de red al obtener las recetas:");
+    }
   };
+
 
   /* MAQUETADO Y LOG EXT ------------------------------------------------------------------------------------------------------ */
   return (
