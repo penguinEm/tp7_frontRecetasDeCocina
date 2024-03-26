@@ -1,4 +1,4 @@
-const URI_RECETAS = import.meta.env.VITE_API_PRODUCTOS;
+const URI_RECETAS = import.meta.env.VITE_API_RECETAS;
 
 /* GET de TODOS - los objetos de nuestro array en la fake api*/
 export const obtenerRecetas = async () => {
