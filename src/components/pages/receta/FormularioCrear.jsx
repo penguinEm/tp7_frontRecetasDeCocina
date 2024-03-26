@@ -255,9 +255,9 @@
                     "Debe ingresar como mínimo 10 caracteres para detallar los pasos de la preparación",
                 },
                 maxLength: {
-                  value: 500,
+                  value: 1.000,
                   message:
-                    "Debe ingresar como máximo 500 caracteres para detallar los pasos de la preparación",
+                    "Debe ingresar como máximo 1.000 caracteres para detallar los pasos de la preparación",
                 },
               })}
             />
