@@ -2,6 +2,7 @@ import React from "react";
 import CardReceta from "./receta/CardReceta";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import imgSinProductos from "../../assets/src/assets/Dbvacio.png";
 
 const ContenedorCards = ({ recetas }) => {
   return (
@@ -14,7 +15,11 @@ const ContenedorCards = ({ recetas }) => {
         </article>
       ) : (
         <div className="text-center">
-          <Image src="public/Dbvacio.png" fluid />
+          <Image
+            src={imgSinProductos}
+            alt="Imagen que indica que el sitio esta sin productos"
+            className="img-fluid imgError rounded-2"
+          />
           <Link
             className="btn btn-outline-danger mt-3 nav-link mb-3 d-inline-block"
             to={"/crearReceta"}
