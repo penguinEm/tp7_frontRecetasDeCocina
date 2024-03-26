@@ -17,7 +17,7 @@ const ContenedorCards = ({ recetas }) => {
       ) : (
         <article className="row justify-content-center justify-content-sm-center justify-content-lg-between justify-content-md-between">
           {recetas.map((receta) => (
-            <CardReceta key={receta.id} receta={receta}></CardReceta>
+            <CardReceta key={receta._id} receta={receta}></CardReceta>
           ))}
         </article>
       )}

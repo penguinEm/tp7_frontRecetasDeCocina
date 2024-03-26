@@ -63,7 +63,6 @@
     useEffect(() => {
       if (crear === false) {
         cargarFormularioEditar();
-        console.log(id);
       }
     }, []);
 
@@ -71,13 +70,12 @@
       const respuesta = await obtenerReceta(id);
       if (respuesta.status === 200) {
         const recetaBuscada = await respuesta.json();
-        console.log(recetaBuscada);
         setValue("nombreReceta", recetaBuscada.nombreReceta);
         setValue("precio", recetaBuscada.precio);
         setValue("imagen", recetaBuscada.imagen);
         setValue("descripcion", recetaBuscada.descripcion);
         setValue("ingredientes", recetaBuscada.ingredientes);
-        setValue("id", recetaBuscada.id);
+        setValue("id", recetaBuscada._id);
         setValue("preparacion", recetaBuscada.preparacion);
       } else {
         Swal.fire({

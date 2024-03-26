@@ -28,7 +28,7 @@ const DetalleReceta = () => {
         });
       }
     } catch (error) {
-      console.log("Error al cargar detalles:");
+      console.error("Error al cargar detalles:");
       Swal.fire({
         title: "Ocurrió un error!",
         text: "Intente nuevamente más tarde",

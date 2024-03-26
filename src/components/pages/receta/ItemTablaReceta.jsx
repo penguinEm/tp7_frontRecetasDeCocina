@@ -20,7 +20,7 @@ const ItemTablaReceta = ({ receta, setRecetas }) => {
       cancelButtonText: "Cancelar",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const respuesta = await borrarRecetaApi(receta.id);
+        const respuesta = await borrarRecetaApi(receta._id);
         if (respuesta.status === 200) {
           const recetasActualizadas = await obtenerRecetas();
           setRecetas(recetasActualizadas);
@@ -63,7 +63,7 @@ const ItemTablaReceta = ({ receta, setRecetas }) => {
       <td className="text-center pt-5 opciones-responsive">
         <Link
           className="me-1 btn btn-warning"
-          to={`/editarReceta/${receta.id}`}
+          to={`/editarReceta/${receta._id}`}
         >
           <i className="bi bi-pencil-square"></i>
         </Link>

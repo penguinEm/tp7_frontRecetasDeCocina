@@ -7,7 +7,7 @@ export const obtenerRecetas = async () => {
     const recetas = await respuesta.json();
     return recetas;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -17,7 +17,7 @@ export const obtenerReceta = async (id) => {
     const respuesta = await fetch(`${URI_RECETAS}/${id}`);
     return respuesta;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -34,7 +34,7 @@ export const crearRecetaAPI = async (nuevaReceta) => {
     });
     return respuesta;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -47,7 +47,7 @@ export const borrarRecetaApi = async (id) => {
     });
     return respuesta;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
@@ -63,6 +63,6 @@ export const editarRecetaApi = async (id, receta) => {
     });
     return respuesta;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
