@@ -1,45 +1,45 @@
+# Frontend del CRUD de Recetas de Cocina
 
-# CRUD en REACT de recetas de cocina 
-![CRUD](<crud react.png>)
+Este proyecto consiste en la parte frontend de la práctica de un CRUD de Recetas de Cocina. Utilizando diversas bibliotecas y herramientas para construir una interfaz de usuario dinámica e interactiva. Este proyecto se desarrollo principalmente con **[react](https://www.npmjs.com/package/react):** Biblioteca JavaScript para construir interfaces de usuario.
 
-Este proyecto es una aplicación web desarrollada con React que permite realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre recetas de cocina. A continuación, se detallan las tecnologías y herramientas utilizadas:
 
-- **Bootstrap y React-Bootstrap:** Utilizados para estilizar y estructurar la interfaz de usuario de la aplicación de manera eficiente y responsiva.
+## Descripción del CRUD de Lista de Tareas
 
-- **Bootstrap - icon:** Utilizados para estilizar y estructurar la interfaz de usuario de la aplicación de manera eficiente y responsiva. - [Documentación React-bootstrap](https://react-bootstrap.github.io/docs/getting-started/introduction)
+El frontend de esta aplicación implementa un sistema CRUD (Crear, Leer, Actualizar, Eliminar) para administrar tarjetas decriptivas de recetas de cocina. Utiliza solicitudes Fetch para comunicarse con el backend, permitiendo al usuario realizar las siguientes operaciones:
 
-- **FontAwesome:** Se incorporó FontAwesome para agregar iconos a la interfaz de usuario, proporcionando una experiencia visual mejorada. - [Documentación React-Fontawesome](https://fontawesome.com/v5/docs/web/use-with/react)
+- **Crear Card Receta:** Permite al usuario agregar una nueva tarea a la lista.
+- **Leer Cards Recetas:** Muestra la lista completa de tareas almacenadas en el backend.
+- **Actualizar Recetas:** Permite al usuario editar una tarea existente.
+- **Eliminar Recetas:** Permite al usuario eliminar una tarea de la lista.
+Estas operaciones se realizan mediante solicitudes HTTP al backend, que gestiona la lógica y la persistencia de los datos en la base de datos.
 
-- **FAK API de :** La aplicación consume la API de Newsdata.io para obtener información actualizada y relevante sobre noticias. Puedes encontrar más detalles sobre la API en [json-server](https://github.com/typicode/json-server).
+![alt text](public/1.png)
+![alt text](public/2recetas.png)
 
-- **React:** El proyecto se basa en el framework de trabajo React, permitiendo un desarrollo eficiente y una interfaz de usuario dinámica.
+## Demo
 
-- **SwetAlert** Se integra SweetAlert2 para mostrar mensajes y alertas interactivas en la interfaz. [Sweetlaert2](https://sweetalert2.github.io/)
+Puedes ver una demostración del proyecto en el siguiente enlace: [Demo](https://recetas-cocina.netlify.app/)
 
-- **React-hook-form** Utilizado para gestionar y validar formularios de manera eficiente. [react-hook-form](https://react-hook-form.com/get-started)
 
-- **Reactrouter** Integrado para gestionar la navegación entre las distintas vistas de la aplicación. [Reactrouter](https://reactrouter.com/en/main/start/tutorial)
+## Dependencias Utilizadas
 
-## Características Principales
+- **[@fortawesome/free-solid-svg-icons](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons):** Proporciona iconos de FontAwesome para la interfaz de usuario.
+- **[bootstrap](https://www.npmjs.com/package/bootstrap):** Framework CSS para estilizar la aplicación.
+- **[bootstrap-icons](https://www.npmjs.com/package/bootstrap-icons):** Proporciona iconos de Bootstrap para la interfaz de usuario.
+- **[react-bootstrap](https://www.npmjs.com/package/react-bootstrap):** Implementa los componentes de Bootstrap en React.
+- **[react-dom](https://www.npmjs.com/package/react-dom):** Proporciona el DOM virtual de React para renderizar componentes.
+- **[react-hook-form](https://www.npmjs.com/package/react-hook-form):** Librería para manejar formularios en React.
+- **[react-router-dom](https://www.npmjs.com/package/react-router-dom):** Biblioteca de enrutamiento para React.
+- **[sweetalert2](https://www.npmjs.com/package/sweetalert2):** Biblioteca para mostrar ventanas modales en la aplicación.
+- **[react-spinners](https://github.com/penguinEm/Tp7_backendRecetasDeCocina.git):** Biblioteca para mostrar ventanas spinners de carga en la aplicación.
 
--   Creación, Edición y Eliminación de Recetas: Permite realizar operaciones CRUD sobre recetas de cocina, proporcionando una gestión completa.
 
--   Visualización de Recetas: Las recetas se presentan en tarjetas organizadas de manera atractiva.
+Para instalar todas las dependencias del proyecto, ejecuta el siguiente comando desde la terminal, en la raíz de tu proyecto:
 
--   Enlace a Detalles de Receta: Cada tarjeta de receta incluye un botón "Ver más" que enlaza a los detalles completos de la receta..
-
-## DEMO:
-
-https://tp6ejercicio14.netlify.app/
-
-- **Variable de entorno (.env)**
-
+```bash
+npm install @fortawesome/free-solid-svg-icons bootstrap bootstrap-icons react react-bootstrap react-dom react-hook-form react-router-dom sweetalert2 react-loader-spinner
 ```
-VITE_API_PRODUCTOS=http://localhost:3000/recetas
-```
+## Repositorios
 
-- **Levantar la fake api**
-
-```dotnetcli
-npx json-server db.json
-```
+- [Backend](https://github.com/penguinEm/Tp7_backendRecetasDeCocina.git): Enlace al repositorio del backend.
+- [Frontend](https://github.com/penguinEm/tp7_frontRecetasDeCocina.git): Enlace al repositorio del frontend.
