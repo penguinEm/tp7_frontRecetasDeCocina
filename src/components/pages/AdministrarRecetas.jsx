@@ -4,6 +4,7 @@ import ItemTablaReceta from "./receta/ItemTablaReceta";
 import { useEffect, useState } from "react";
 import { obtenerRecetas } from "../../helpers/queries";
 
+
 const AdministrarRecetas = () => {
   /* VARIABLES GLOBALES -------------------------------------------------------------------------------------------------- */
   const [recetas, setRecetas] = useState([]);
