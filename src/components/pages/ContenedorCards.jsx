@@ -1,8 +1,7 @@
 import React from "react";
 import CardReceta from "./receta/CardReceta";
-import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import imgSinProductos from "../../assets/src/assets/Dbvacio.png";
+import imgSinProductos from "../../assets/src/assets/sinProductos.png";
 
 const ContenedorCards = ({ recetas }) => {
   return (
@@ -15,7 +14,7 @@ const ContenedorCards = ({ recetas }) => {
         </article>
       ) : (
         <div className="text-center">
-          <Image
+          <img
             src={imgSinProductos}
             alt="Imagen que indica que el sitio esta sin productos"
             className="img-fluid imgError rounded-2"
